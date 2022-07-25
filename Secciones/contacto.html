@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+    <title>Proyecto Restaurante</title>
+</head>
+<body>
+    <div class="grilla">         
+        <nav class="nav">
+            <a href="../index.html" class="logo nav-link">Restaurante</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a href="./Secciones/galeria.html" class="nav-link">Galeria</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="./Secciones/sucursales.html" class="nav-link">Sucursales</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="./Secciones/menu.html" class="nav-link">Menu</a>        
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="./Secciones/contacto.html" class="nav-link">Contacto</a>
+                    <li>
+                </ul>
+        </nav>
+    </div>
+
+    <h1>Formulario de Contacto</h1>
+
+    <section>
+        <div class="contacto">
+            <form>
+                <label for="nombre_apellido">Nombre y Apellido</label>
+                <br>
+                <input type="text" name="nombre_apellido">
+                <br>
+                <label for="edad">Edad</label>
+                <br>
+                <input type="number" name="edad" min="18">
+                <br>
+                <label for="comentario">Comentarios</label>    
+                <br>        
+                <textarea type="text" name="comentario" rows="20" cols="50" placeholder="Escribir comentario aqui"></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </form>
+        </div>
+    </section>
+    
+    <footer class="footer-main">
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.0834618597637!2d-4.4581604!3d40.184956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4035b57551b6f3%3A0x84be095154d712f6!2sC.%20Falsa%2C%2045908%20Aldea%20en%20Cabo%2C%20Toledo%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sar!4v1656364960538!5m2!1ses-419!2sar" width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+            <div class="box-info">
+                <div class="info-mapa">
+                    <p>C. Falsa 45908, Toledo, España</p>
+                    <p>Telefono: 4458-3040</p>
+                </div>
+                <div class="box-redes">
+                    <img class="redes" src="../Fotos/logoig.png" alt="instagram">
+                    <img class="redes" src="../Fotos/logofb.png" alt="facebook">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
