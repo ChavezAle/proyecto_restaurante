@@ -7,7 +7,7 @@
 body {
   text-align: center;
   font-family: "Oswald", sans-serif;
-  background-color: whitesmoke;
+  background-color: #FDF5E6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -28,22 +28,24 @@ body {
 .contenedor-imagen {
   display: flex;
   width: 100%;
-  height: 800px;
+  height: 300px;
+  background-image: url(../fotos/chefs.png);
+  text-align: center;
   overflow: hidden;
   position: relative;
 }
-.contenedor-imagen img {
-  width: 100%;
-  height: 100%;
-}
-.contenedor-imagen p, .contenedor-imagen h5 {
+.contenedor-imagen p {
   font-size: 3rem;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
+  text-transform: uppercase;
   transform: translate(-50%, -50%);
   text-shadow: 0 0 8px rgb(63, 61, 61);
+}
+.contenedor-imagen .tl2 {
+  font-size: 10px;
 }
 
 .contenedor-texto {
@@ -102,12 +104,20 @@ body {
 }
 
 /*Declaro Areas*/
+header {
+  grid-area: header;
+}
+
 nav {
   grid-area: nav;
 }
 
-.galeria {
-  grid-area: seccion;
+.container {
+  grid-area: imag-cont;
+}
+
+.container-texto {
+  grid-area: cont-texto;
 }
 
 footer {
@@ -120,7 +130,7 @@ footer {
   margin-bottom: 1.5em;
   display: grid;
   gap: 0px;
-  grid-template-areas: "nav" "galeria" "footer";
+  grid-template-areas: "header" "nav" "imag-cont" "cont-texto" "footer";
 }
 
 .galeria-contenido {
@@ -164,8 +174,12 @@ section {
   display: flex;
   justify-content: center;
   width: 500px;
-  height: 500px;
-  border: 1px solid #232323;
+  height: 100%;
+  padding: 30px;
+}
+.contacto input {
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .box-info {
@@ -181,9 +195,6 @@ section {
 }
 
 @media (min-width: 768px) {
-  body {
-    background-color: whitesmoke;
-  }
   .grilla {
     margin-bottom: 1.5em;
     grid-template-areas: "nav" "galeria" "footer";
@@ -212,9 +223,6 @@ section {
   }
 }
 @media (min-width: 1024px) {
-  body {
-    background-color: whitesmoke;
-  }
   .box-imagen {
     grid-template-columns: 1fr 1fr;
     justify-content: center;

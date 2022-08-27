@@ -1,17 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-}
-
-body{
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+@import "fuentes";
+@import "generales";
 
 /* Carrusel de imagenes*/
 
@@ -29,21 +17,23 @@ body{
 .contenedor-imagen{
     display: flex;
     width: 100%;
-    height: 800px;
+    height: 300px;
+    background-image: url(../fotos/chefs.png);
+    text-align: center;
     overflow: hidden;
     position: relative;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-        p, h5 {
+        p{
             font-size: 3rem;
             color: white;
             position: absolute;
             top: 50%;
             left: 50%;
+            text-transform: uppercase;
             transform: translate(-50%, -50%);
             text-shadow: 0 0 8px rgb(63, 61, 61);
+        }
+        .tl2{
+            font-size: 10px;
         }
 }
 
@@ -103,13 +93,20 @@ width: auto;
 
 
 /*Declaro Areas*/
+header{
+    grid-area: header;
+}
 
 nav{
     grid-area: nav;
 }
 
-.galeria{
-    grid-area: seccion;
+.container{
+    grid-area: imag-cont;
+}
+
+.container-texto{
+    grid-area: cont-texto;
 }
 
 footer{
@@ -124,8 +121,10 @@ footer{
     display: grid;
     gap: 0px;
     grid-template-areas:
+    "header"
     "nav"
-    "galeria"
+    "imag-cont"
+    "cont-texto"
     "footer";
 }
 
@@ -170,8 +169,12 @@ section{
     display: flex;
     justify-content: center;
     width: 500px;
-    height: 500px;
-    border: 1px solid #232323;
+    height: 100%;
+    padding: 30px;
+        input{
+            width: 100%;
+            margin-bottom: 5px;
+        }
 }
 
 .box-info{
@@ -190,9 +193,6 @@ section{
 
 @media (min-width:768px){
 
-    body{
-        background-color: whitesmoke;
-    }
     .grilla {
         margin-bottom: 1.5em;
         grid-template-areas: 
@@ -231,10 +231,6 @@ section{
 }
 
 @media (min-width:1024px){
-    
-    body{
-        background-color: whitesmoke;
-    }
 
     .box-imagen{
         grid-template-columns: 1fr 1fr;
